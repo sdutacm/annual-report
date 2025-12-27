@@ -40,10 +40,10 @@
 import { global } from "@/assets/global";
 let newct = global.value.competitionCount
 let parti = global.value.competitionUniqueParticipantCount
-let blue = global.value.competitions[0].title
-let xiaosai = global.value.competitions[1].title
-let xinsheng = global.value.competitions[2].title
-let pmc = global.value.competitions[3].title
+// let blue = global.value.competitions[0].title
+let xiaosai = global.value.competitions[0].title
+let xinsheng = global.value.competitions[1].title
+let pmc = global.value.competitions[2].title
 
 import { ref, onMounted } from "vue";
 import { can, isnext, isScoll } from "@/assets/global";

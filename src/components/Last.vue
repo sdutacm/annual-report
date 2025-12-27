@@ -50,12 +50,12 @@
   </section>
   <section v-else class="summ">
     <div class="sumarry" ref="sumarry">
-      <span class="scanner">扫码查看 2024 专属年度报告</span>
+      <span class="scanner">扫码查看 2025 专属年度报告</span>
       <lay-qrcode
         :width="93"
         :backgroundColor="'#ffffff00'"
         class="sum-qr"
-        text="https://acm.sdut.edu.cn/onlinejudge3/annual-report-2024/?from=qr"
+        text="https://oj.sdutacm.cn/onlinejudge3/annual-report-2025/?from=qr"
         style="background-color: transparent"
       ></lay-qrcode>
       <img
@@ -88,7 +88,7 @@
         </div>
         <div class="results-summary-container__result">
           <div class="heading-tertiary">
-            我的 SDUT OJ 2024 年报 <span>🥳</span>
+            我的 SDUT OJ 2025 年报 <span>🥳</span>
           </div>
           <div class="result-box">
             <img
@@ -158,7 +158,7 @@
             </div>
           </div>
           <div class="results-summary-container__options" :style="{ opacity : tags.length > 0 ? 1 : 0 }">
-            <div class="tag-head">2024 回忆标签 ✨️</div>
+            <div class="tag-head">2025 回忆标签 ✨️</div>
             <ul class="summary-result-options">
               <li v-for="(item, index) in tags" :key="index" class="tag">
                 {{ item }}
@@ -339,7 +339,7 @@ const downloadAsImage = async () => {
   if (sumarry.value) {
     try {
       const qrCodeDataUrl = await generateQRCode(
-        "https://acm.sdut.edu.cn/onlinejudge3/annual-report-2024"
+        "https://oj.sdutacm.cn/onlinejudge3/annual-report-2025"
       );
       html2canvas(sumarry.value, {
         useCORS: true, // 启用跨域支持
@@ -395,10 +395,10 @@ if (liuyang.value.maxTries) {
 if (liuyang.value.competition.asGenshin) {
   tags.value.push("原神启动!");
 }
-if (liuyang.value.competition.sdutpc16) {
+if (liuyang.value.competition.sdutpc17) {
   tags.value.push("校赛见证者");
 }
-if (liuyang.value.competition.sdutnc6th) {
+if (liuyang.value.competition.sdutnc7th) {
   tags.value.push("初升新星");
 }
 if (liuyang.value.competition.sdutpmc16th) {

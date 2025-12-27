@@ -84,10 +84,10 @@
 import { can, isnext, isScoll } from "@/assets/global";
 import { onMounted, ref } from "vue";
 import { liuyang } from "@/assets/global";
-let co = liuyang.value.competition.sdutpc16.officialParticipantCount
-let small = liuyang.value.competition.sdutpc16.unofficialParticipantCount
-let cj = liuyang.value.competition.sdutpc16.awardStr
-let medal = liuyang.value.competition.sdutpc16.medal
+let co = liuyang.value.competition.sdutpc17.officialParticipantCount
+let small = liuyang.value.competition.sdutpc17.unofficialParticipantCount
+let cj = liuyang.value.competition.sdutpc17.awardStr
+let medal = liuyang.value.competition.sdutpc17.medal
 onMounted(() => {
   const allanim = new IntersectionObserver(
     (lists) => {

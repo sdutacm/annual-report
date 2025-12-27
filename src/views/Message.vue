@@ -1,5 +1,5 @@
 <template>
-  <p class="title fontremove">SDUT OJ 2024 年度报告</p>
+  <p class="title fontremove">SDUT OJ 2025 年度报告</p>
   <img
     src="../assets/img/up.svg"
     alt=""
@@ -7,7 +7,7 @@
     :class="{ nextactive: isnext }"
   />
 
-  <section id="page1" class="page ">
+  <section id="page1" class="page">
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
       <div class="confetti"></div>
@@ -49,9 +49,10 @@
       <div class="kmc fontremove">
         <div class="hei" style="width: 100%">
           <!-- <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${liuyang.avatar}`" alt="" style="border-radius: 50%;" /> -->
-          <span>{{liuyang.nickname}}，</span>
+          <span>{{ liuyang.nickname }}，</span>
         </div>
-        欢迎回家！在这一年里， SDUT OJ 发生了许多新的故事，其中也有属于你的篇章。
+        欢迎回家！在这一年里， SDUT OJ
+        发生了许多新的故事，其中也有属于你的篇章。
         <span
           >我们迫不及待地邀请你一起回望时间的起点，再次见证那些有你陪伴的好时光。</span
         >
@@ -69,25 +70,29 @@
   <Night id="page6" class="page hide" v-if="hasNight"></Night>
   <Hard id="page7" class="page hide" v-if="hasMaxTries"></Hard>
   <BiSai id="page8" class="page hide" v-if="hascontest"></BiSai>
-  <Blue id="page9" class="page hide" v-if="hasBlue" ></Blue>
+  <Blue id="page9" class="page hide" v-if="hasBlue"></Blue>
   <XiaoSai id="page10" class="page hide" v-if="hasXiaoSai"></XiaoSai>
   <XinSheng id="page11" class="page hide" v-if="ncc"></XinSheng>
   <LeiTai id="page12" class="page hide" v-if="haspmc"></LeiTai>
-  <AchivementStar id="page13" class="page hide" v-if="hasAchive"></AchivementStar>
+  <AchivementStar
+    id="page13"
+    class="page hide"
+    v-if="hasAchive"
+  ></AchivementStar>
   <Master id="page14" class="page hide"></Master>
   <Last id="pae15" class="page hide"></Last>
   <section style="z-index: -1"></section>
 </template>
 <script setup>
 import { liuyang } from "../assets/global";
-const hasNight = ref(false)
-if(liuyang.value.nightWalker){
-  hasNight.value=true
+const hasNight = ref(false);
+if (liuyang.value.nightWalker) {
+  hasNight.value = true;
 }
 import Hard from "../components/Hard.vue";
-const hasMaxTries = ref(false)
-if(liuyang.value.maxTries&&liuyang.value.maxTries.count>=5){
-  hasMaxTries.value=true
+const hasMaxTries = ref(false);
+if (liuyang.value.maxTries && liuyang.value.maxTries.count >= 5) {
+  hasMaxTries.value = true;
 }
 import Last from "../components/Last.vue";
 import "vue3-fullpage/styles";
@@ -98,43 +103,43 @@ import Special from "../components/Special.vue";
 import NewContest from "../components/NewContest.vue";
 import AC from "../components/AC.vue";
 import BiSai from "../components/BiSai.vue";
-let hascontest = ref(false)
-if(liuyang.value.competition.attendedCompetitionCount>0){
-  hascontest.value=true
+let hascontest = ref(false);
+if (liuyang.value.competition.attendedCompetitionCount > 0) {
+  hascontest.value = true;
 }
 import Blue from "../components/Blue.vue";
-const hasBlue = ref(false)
-if(liuyang.value.competition.asGenshin){
-  hasBlue.value=true
+const hasBlue = ref(false);
+if (liuyang.value.competition.asGenshin) {
+  hasBlue.value = true;
 }
 import XiaoSai from "../components/XiaoSai.vue";
-const hasXiaoSai = ref(false)
-if(liuyang.value.competition.sdutpc16){
-  hasXiaoSai.value=true
+const hasXiaoSai = ref(false);
+if (liuyang.value.competition.sdutpc17) {
+  hasXiaoSai.value = true;
 }
 import XinSheng from "../components/XinSheng.vue";
-let ncc = ref(false)
-if(liuyang.value.competition.sdutncc6th){
-  ncc.value=true
+let ncc = ref(false);
+if (liuyang.value.competition.sdutncc6th) {
+  ncc.value = true;
 }
 import LeiTai from "../components/LeiTai.vue";
-const haspmc = ref(false)
-if(liuyang.value.competition.sdutpmc16th){
-  haspmc.value=true
+const haspmc = ref(false);
+if (liuyang.value.competition.sdutpmc16th) {
+  haspmc.value = true;
 }
 const isClick = ref(false);
 const tsxx = ref(true);
 const scr = ref(false);
 import { isnext, can } from "../assets/global";
 import AchivementStar from "../components/AchivementStar.vue";
-const hasAchive = ref(false)
-if(liuyang.value.achievements.length>0){
-  hasAchive.value=true
+const hasAchive = ref(false);
+if (liuyang.value.achievements.length > 0) {
+  hasAchive.value = true;
 }
 import Master from "../components/Master.vue";
 import { contain } from "../assets/global";
 import { isScoll } from "../assets/global";
-import Sumarry from "@/components/Sumarry.vue";
+
 onMounted(() => {
   let currentPage = 0;
   const pages = document.querySelectorAll(".page");
@@ -294,7 +299,7 @@ section {
   25% {
     opacity: 1;
   }
-  90%{
+  90% {
     opacity: 1;
   }
   100% {

@@ -1,12 +1,9 @@
 <template>
   <div class="music" v-if="musicStart">
-    <!-- <button   @click="playBGM" class="play_button"><img src="../assets/img/music_playing.svg" alt="" class="playing"></button> -->
-    <!-- <span style="color: white"
-      >Current: {{ bgmMuted ? "已静音" : "未静音" }}</span
-    > -->
-    <button  @click="switchMuteBGM" class="play_button">
-      <img v-if="musicPlay" src="../assets/img/music_playing.svg" alt="">
-      <img v-else src="../assets/img/music_shutoff.svg" alt=""></button>
+    <button @click="switchMuteBGM" class="play_button">
+      <img v-if="musicPlay" src="../assets/img/music_playing.svg" alt="" />
+      <img v-else src="../assets/img/music_shutoff.svg" alt="" />
+    </button>
   </div>
   <Suspense>
     <Start v-if="gogo"></Start>
@@ -19,12 +16,21 @@ import { onMounted } from "vue";
 import { Howl } from "howler";
 import Start from "./Start.vue";
 import Message from "./Message.vue";
-import { gogo, bgmMuted, playBGM, switchMuteBGM, musicPlay, musicStart } from "@/assets/global";
+import {
+  gogo,
+  bgmMuted,
+  playBGM,
+  switchMuteBGM,
+  musicPlay,
+  musicStart,
+} from "@/assets/global";
 
 onMounted(() => {
   !window.bgm &&
     (window.bgm = new Howl({
-      src: [`${new URL("../assets/audio/bgm.mp3", import.meta.url).href}`],
+      src: [
+        `${new URL("../assets/audio/bgm-2025.flac", import.meta.url).href}`,
+      ],
       html5: true,
       volume: 0.66,
       loop: true,
@@ -59,16 +65,16 @@ onMounted(() => {
   z-index: 999999;
 }
 
-.play_button{
+.play_button {
   border: 0;
-  width: .8rem;
+  width: 0.8rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, .1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.playing{
-  height: .7rem;
+.playing {
+  height: 0.7rem;
   /* clip-path: circle(50% at 50% 50%); */
   /* border-radius: 50%; */
 }
