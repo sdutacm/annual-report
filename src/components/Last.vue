@@ -70,7 +70,7 @@
         :width="93"
         :backgroundColor="'#ffffff00'"
         class="sum-qr"
-        text="https://oj.sdutacm.cn/onlinejudge3/annual-report-2025/?from=qr"
+        text="https://oj.sdutacm.cn/annual-report-2025/?from=qr"
         style="background-color: transparent"
       ></lay-qrcode>
       <img
@@ -360,7 +360,7 @@ const downloadAsImage = async () => {
   if (sumarry.value) {
     try {
       const qrCodeDataUrl = await generateQRCode(
-        "https://oj.sdutacm.cn/onlinejudge3/annual-report-2025"
+        "https://oj.sdutacm.cn/oj-annual-report-2025"
       );
       html2canvas(sumarry.value, {
         useCORS: true, // 启用跨域支持
