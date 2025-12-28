@@ -3,18 +3,23 @@
     <div class="master">
       <div class="mstxt">
         <div class="mstxt1">纵观整个OJ</div>
-        <!-- <div class="mstxt5">在所有成就中，最稀有的成就是<span>{{ title }}</span></div>
-        <div class="mstxt6">仅有<span>{{ rareNum }}</span>人达成</div> -->
-
         <div class="mstxt2">
-          <span>最强成就大师</span><img
+          <span>最强成就大师</span>
+          <img
             :src="`https://cdn.sdutacm.cn/oj/image/avatars/${masterAvatar}`"
             alt=""
             class="msimg"
-          /><span class="masterName">{{ master }}</span>
+          />
+          <span class="masterName">{{ master }}</span>
         </div>
-        <div class="mstxt3">已经达成了<span>{{ masterNum }}</span>项成就</div>
-        <div class="mstxt4">距离<span>{{ globalAchiveNum }}</span>项全成就仅有一步之遥</div>
+        <div class="mstxt3">
+          已经达成了<span>{{ masterNum }}</span
+          >项成就
+        </div>
+        <div class="mstxt4">
+          距离<span>{{ globalAchiveNum }}</span
+          >项全成就仅有一步之遥
+        </div>
       </div>
       <div class="cards">
         <div class="outlinePage">
@@ -57,8 +62,14 @@
           </svg>
           <p class="ranking_number">1<span class="ranking_word">st</span></p>
           <div class="splitLine"></div>
-          <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${masterAvatar}`" alt="" class="mmm" />
-          <p class="userName">{{ master }}</p>
+          <div class="mmm-container">
+            <img
+              :src="`https://cdn.sdutacm.cn/oj/image/avatars/${masterAvatar}`"
+              alt=""
+              class="mmm"
+            />
+            <p class="userName">{{ master }}</p>
+          </div>
         </div>
         <div class="detailPage">
           <svg
@@ -165,18 +176,17 @@ import { ref, onMounted } from "vue";
 import achivements from "@/configs/achivement-config";
 import { global } from "@/assets/global";
 
-let master = global.value.achievementTopUsers[0].nickname
-let masterNum = global.value.achievementTopUsers[0].achievements.length
-let globalAchiveNum = global.value.achievementNum
-let rare = global.value.topRareAchievements[0].achievementKey
-let rareNum = global.value.topRareAchievements[0].count
-let masterAvatar = global.value.achievementTopUsers[0].avatar
-console.log(masterAvatar)
-let title = ref(null)
-achivements.forEach(achiv=>{
-  if(achiv.achievementKey === rare)
-    title.value=achiv.title
-})
+let master = global.value.achievementTopUsers[0].nickname;
+let masterNum = global.value.achievementTopUsers[0].achievements.length;
+let globalAchiveNum = global.value.achievementNum;
+let rare = global.value.topRareAchievements[0].achievementKey;
+let rareNum = global.value.topRareAchievements[0].count;
+let masterAvatar = global.value.achievementTopUsers[0].avatar;
+console.log(masterAvatar);
+let title = ref(null);
+achivements.forEach((achiv) => {
+  if (achiv.achievementKey === rare) title.value = achiv.title;
+});
 onMounted(() => {
   const medals = document.querySelector(".medals");
   const ms1anim = new IntersectionObserver(
@@ -199,7 +209,6 @@ onMounted(() => {
     { threshold: 0.5 }
   );
   const mstxt1s = document.querySelectorAll(
-    // ".mstxt1, .mstxt5, .mstxt6, .mstxt2, .mstxt3, .mstxt4, .cards"
     ".mstxt1, .mstxt2, .mstxt3, .mstxt4, .cards"
   );
   mstxt1s.forEach((mstxt1) => ms1anim.observe(mstxt1));

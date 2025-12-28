@@ -1,5 +1,5 @@
 <template>
-  <p class="title fontremove">SDUT OJ 2025 年度报告</p>
+  <div class="title fontremove">SDUT OJ 2025 年度报告</div>
   <img
     src="../assets/img/up.svg"
     alt=""
@@ -51,11 +51,8 @@
           <!-- <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${liuyang.avatar}`" alt="" style="border-radius: 50%;" /> -->
           <span>{{ liuyang.nickname }}，</span>
         </div>
-        欢迎回家！在这一年里， SDUT OJ
-        发生了许多新的故事，其中也有属于你的篇章。
-        <span
-          >我们迫不及待地邀请你一起回望时间的起点，再次见证那些有你陪伴的好时光。</span
-        >
+        欢迎回来！SDUT OJ 一直记得你，并始终珍视由你留下的印记。
+        <span>让我们一起回望时间的起点，再次见证那些有你陪伴的好时光。</span>
         <div class="kmc-oj">bLue，SDUT OJ 主理人</div>
       </div>
       <p class="ts" v-if="tsxx">你有一封 SDUT OJ 的来信</p>
@@ -63,22 +60,18 @@
       <div class="jiyu" id="jiyu1"></div>
     </div>
   </section>
+  <NewContest id="page4" class="page hide"></NewContest>
   <Special id="page2" class="page hide"></Special>
   <XinZeng id="page3" class="page hide"></XinZeng>
-  <NewContest id="page4" class="page hide"></NewContest>
   <AC id="page5" class="page hide"></AC>
   <Night id="page6" class="page hide" v-if="hasNight"></Night>
   <Hard id="page7" class="page hide" v-if="hasMaxTries"></Hard>
   <BiSai id="page8" class="page hide" v-if="hascontest"></BiSai>
-  <Blue id="page9" class="page hide" v-if="hasBlue"></Blue>
+  <!-- <Blue id="page9" class="page hide" v-if="hasBlue"></Blue> -->
   <XiaoSai id="page10" class="page hide" v-if="hasXiaoSai"></XiaoSai>
   <XinSheng id="page11" class="page hide" v-if="ncc"></XinSheng>
   <LeiTai id="page12" class="page hide" v-if="haspmc"></LeiTai>
-  <AchivementStar
-    id="page13"
-    class="page hide"
-    v-if="hasAchive"
-  ></AchivementStar>
+  <AchivementStar id="page13" class="page hide" v-if="hasAchive" />
   <Master id="page14" class="page hide"></Master>
   <Last id="pae15" class="page hide"></Last>
   <section style="z-index: -1"></section>
@@ -119,12 +112,12 @@ if (liuyang.value.competition.sdutpc17) {
 }
 import XinSheng from "../components/XinSheng.vue";
 let ncc = ref(false);
-if (liuyang.value.competition.sdutncc6th) {
+if (liuyang.value.competition.sdutnc7th) {
   ncc.value = true;
 }
 import LeiTai from "../components/LeiTai.vue";
 const haspmc = ref(false);
-if (liuyang.value.competition.sdutpmc16th) {
+if (liuyang.value.competition.sdutpmc17th) {
   haspmc.value = true;
 }
 const isClick = ref(false);
@@ -263,7 +256,6 @@ section {
   height: 100vh;
   overflow: hidden;
   transition: all 0.3s linear;
-  /* background-color: rgb(41, 41, 41); */
 }
 
 .fontremove {
@@ -294,7 +286,7 @@ section {
 @keyframes nexting {
   0% {
     opacity: 0;
-    transform: translateX(-50%) translateY(3vh);
+    transform: translateX(-50%) translateY(0);
   }
   25% {
     opacity: 1;

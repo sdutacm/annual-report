@@ -8,15 +8,13 @@
   align-items: center;
 }
 
+
 .msimg {
-  display: inline-block;
+  display: block;
   width: 0.6rem;
-  margin-left: 0.1rem;
-  margin-right: 0.1rem;
   position: relative;
   border-radius: 50%;
-  bottom: .2rem;
-  /* margin-bottom: .1rem; */
+  margin: 0 0.1rem;
 }
 
 .masterName{
@@ -35,7 +33,6 @@
 }
 
 .mstxt div {
-  display: inline-block;
   text-align: center;
   font-size: 0.5rem;
   color: #fff;
@@ -50,13 +47,23 @@
   letter-spacing: 0.1rem;
 }
 
-.mmm {
-  position: absolute;
-  border-radius: 50%;
-  bottom: 3%;
-  left: 5%;
-  width: 0.9rem;
+.mmm-container {
+  position: relative;
+  width: 50%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
+  padding: .1rem;
 }
+
+.mmm {
+  border-radius: 50%;
+  display: block;
+  width: 0.6rem;
+}
+
 .mstxt1,
 .mstxt2,
 .mstxt3,
@@ -68,12 +75,12 @@
   filter: blur(0.1rem);
   opacity: 0;
 }
+
 .mstxt2{
   display: flex;
-  width: auto;
+  width: fit-content;
+  height: fit-content;
   flex-direction: row;
-  flex-shrink: 0;
-  flex-grow: 0;
   justify-content: center;
   align-items: center;
 }
@@ -143,6 +150,9 @@
 
 .cards .outlinePage {
   box-shadow: 0 10px 15px #b1985e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .cards .detailPage {
@@ -225,9 +235,7 @@
   position: relative;
   font-weight: 600;
   color: #6b7578;
-  left: 55px;
   font-size: 18px;
-  top: 15%;
 }
 
 .medals {

@@ -401,7 +401,7 @@ if (liuyang.value.competition.sdutpc17) {
 if (liuyang.value.competition.sdutnc7th) {
   tags.value.push("初升新星");
 }
-if (liuyang.value.competition.sdutpmc16th) {
+if (liuyang.value.competition.sdutpmc17th) {
   tags.value.push("队伍的羁绊");
 }
 

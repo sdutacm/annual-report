@@ -70,8 +70,9 @@ import { useRouter } from "vue-router";
 import req from "@/utils/req";
 const isChecked = ref(true);
 const router = useRouter();
-
 const nickname = ref(null);
+import { contain } from "@/assets/global";
+
 onMounted(async () => {
   try {
     const getres = await req.get("/getSession");
@@ -94,9 +95,6 @@ const Logout = async () => {
   }
 };
 
-import { contain } from "@/assets/global";
-import axios from "axios";
-
 if (window.screen.width > 1000) {
   contain.value = true;
 } else {
@@ -117,8 +115,7 @@ const Going = async () => {
       });
       global.value = globalres.content;
       liuyang.value = selfres.content;
-
-      console.log(liuyang.value);
+      console.log(global.value);
 
       setTimeout(() => {
         gogo.value = false;

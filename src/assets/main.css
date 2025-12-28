@@ -23,23 +23,19 @@
   opacity: 0;
   width: 10%;
   position: absolute;
-  bottom: 10%;
+  bottom: 10px;
   left: 50%;
   transition: all 0.5s ease;
   transform: translateX(-50%) translateY(0);
 }
 
 .title {
-  position: absolute;
   left: 0;
-  display: inline-block;
   height: 0.2rem;
   text-align: center;
-  /* width: inherit; */
   color: #fff;
   font-size: 0.2rem;
   position: fixed;
-  /* left: .2rem; */
   top: 0.2rem;
   font-weight: 700;
   transition: all 0.5s ease;
@@ -498,12 +494,15 @@
 .title {
   left: 40%;
   z-index: 999999;
-  /* top: -3em !important; */
-  transform: scale(1.9) !important;
-  /* transform: translateX(-50%) scale(1.8); */
+  transform: scale(1.9) translateX(10px) !important;
   top: 5% !important;
 
-  /* z-index: 99; */
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    left: 4.5rem;
+  }
 }
 
 .acmsvg {

@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="leitai">
-      <img src="../assets/img/pmc.png" alt="" class="pmc" />
+      <img src="../assets/img/pmc.png" alt="" :class="['pmc', { bgactive: pmcActive }]" />
       <div class="lttxt">
         <div class="txt1">作为全新升级的组队赛</div>
         <div class="txt2">
@@ -14,15 +14,11 @@
         </div>
         <div class="txt4">这份力量，就是你们的羁绊</div>
       </div>
-      <div class="zgn">
-        <img src="../assets/img/zgn.png" alt="" />
-      </div>
-      <img class="nailong" src="../assets/img/nailong.gif" alt="" />
-      <div class="szyx">「奶龙的数学游戏」</div>
-      <div class="jz">「奶龙的矩阵」</div>
-      <div class="ygg">「超的超超超超超超级阳光菇」</div>
-      <div class="cc">「Mirai 大战 灿灿」</div>
-      <div class="hwc">「回文串串回文」</div>
+      <div class="szyx">「BanG Dream! DOTA：全都不会玩！」</div>
+      <div class="jz">「星月夜」</div>
+      <div class="ygg">「Last | Eternity」</div>
+      <div class="cc">「嘻嘻，我一定不能输」</div>
+      <div class="hwc">「 原罪：毁灭侦探」</div>
       <div class="llzm">这些题目一定也使你历历在目 <span>🤗</span></div>
     </div>
   </section>
@@ -30,37 +26,29 @@
 
 <script setup>
 import { liuyang } from "@/assets/global";
-let cnt = liuyang.value.competition.sdutpmc16th.solved;
-let chengji = liuyang.value.competition.sdutpmc16th.awardStr;
-let medal = liuyang.value.competition.sdutpmc16th.medal;
+let cnt = liuyang.value.competition.sdutpmc17th.solved;
+let chengji = liuyang.value.competition.sdutpmc17th.awardStr;
+let medal = liuyang.value.competition.sdutpmc17th.medal;
 import { can, isnext, isScoll } from "@/assets/global";
-import { onMounted, ref } from "vue";
+import { ref, onMounted } from "vue";
+const pmcActive = ref(false);
 onMounted(() => {
   const lttxts = document.querySelectorAll(
     ".szyx, .jz, .ygg, .cc, .hwc, .llzm"
   );
-  const zgn = document.querySelector(".zgn");
-  const nail = document.querySelector(".nailong");
-  const pmc = document.querySelector(".pmc");
+  setTimeout(() => {
+    pmcActive.value = true;
+  }, 100);
   const ltall = new IntersectionObserver(
     (lists) => {
       lists.forEach((list) => {
         if (list.isIntersecting) {
           list.target.classList.add("ltactive");
-          zgn.classList.add("ltactive");
-          pmc.classList.add("bgactive");
-          setTimeout(() => {
-            zgn.classList.add("zgnanim");
-            nail.classList.add("nlanim");
-          }, 5000);
           setTimeout(() => {
             lttxts.forEach((txt) => txt.classList.add("ltactive"));
           }, 8000);
         } else {
           list.target.classList.remove("ltactive");
-          zgn.classList.remove("ltactive");
-          zgn.classList.remove("zgnanim");
-          nail.classList.remove("nlanim");
           lttxts.forEach((txt) => txt.classList.remove("ltactive"));
         }
       });
@@ -106,7 +94,7 @@ onMounted(() => {
 }
 
 .bgactive {
-  filter: blur(0);
-  opacity: 0.5;
+  filter: blur(0) !important;
+  opacity: 0.5 !important;
 }
 </style>
