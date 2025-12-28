@@ -60,9 +60,9 @@
       <div class="jiyu" id="jiyu1"></div>
     </div>
   </section>
-  <NewContest id="page4" class="page hide"></NewContest>
   <Special id="page2" class="page hide"></Special>
   <XinZeng id="page3" class="page hide"></XinZeng>
+  <NewContest id="page4" class="page hide"></NewContest>
   <AC id="page5" class="page hide"></AC>
   <Night id="page6" class="page hide" v-if="hasNight"></Night>
   <Hard id="page7" class="page hide" v-if="hasMaxTries"></Hard>
