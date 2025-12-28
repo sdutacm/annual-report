@@ -13,13 +13,13 @@ export default defineConfig({
   },
   server: {
     host: '127.0.0.1',
-    proxy: {
-      '/onlinejudge3/api': {
-        target: 'https://oj.sdutacm.cn',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/onlinejudge3\/api/, '/onlinejudge3/api'),
-      },
-    }
+    // proxy: {
+    //   '/onlinejudge3/api': {
+    //     target: 'https://oj.sdutacm.cn',
+    //     changeOrigin: true,
+    //     rewrite: (path) => path.replace(/^\/onlinejudge3\/api/, '/onlinejudge3/api'),
+    //   },
+    // }
   },
   experimental: {
     renderBuiltUrl(filename) {
