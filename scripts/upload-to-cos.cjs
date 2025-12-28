@@ -1,4 +1,4 @@
-// scripts/upload-to-cos.js
+// scripts/upload-to-cos.cjs
 // 用于将 dist 目录下的产物上传到 COS annual-report-2025 目录
 
 const COS = require('cos-nodejs-sdk-v5');

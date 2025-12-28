@@ -18,8 +18,9 @@ jobs:
           node-version: 18
       - run: npm ci
       - run: npm run build
+      - run: npm install cos-nodejs-sdk-v5 --no-save
       - name: Upload to COS
-        run: node scripts/upload-to-cos.js
+        run: node scripts/upload-to-cos.cjs
         env:
           COS_SECRET_ID: ${{ secrets.COS_SECRET_ID }}
           COS_SECRET_KEY: ${{ secrets.COS_SECRET_KEY }}
