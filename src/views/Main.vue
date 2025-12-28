@@ -29,7 +29,7 @@ onMounted(() => {
   !window.bgm &&
     (window.bgm = new Howl({
       src: [
-        `${new URL("../assets/audio/bgm-2025.flac", import.meta.url).href}`,
+        `${new URL("../assets/audio/bgm-2025.mp3", import.meta.url).href}`,
       ],
       html5: true,
       volume: 0.66,
