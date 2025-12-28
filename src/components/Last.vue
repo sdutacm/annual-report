@@ -70,7 +70,7 @@
         :width="93"
         :backgroundColor="'#ffffff00'"
         class="sum-qr"
-        text="https://oj.sdutacm.cn/annual-report-2025/?from=qr"
+        text="https://oj.sdutacm.cn/oj-annual-report-2025/?from=qr"
         style="background-color: transparent"
       ></lay-qrcode>
       <img
