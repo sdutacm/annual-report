@@ -19,6 +19,8 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm install cos-nodejs-sdk-v5 --no-save
+      - name: Print dist/index.html after build
+        run: cat dist/index.html
       - name: Upload to COS
         run: node scripts/upload-to-cos.cjs
         env:
@@ -27,3 +29,5 @@ jobs:
           COS_BUCKET: ${{ secrets.COS_BUCKET }}
           COS_REGION: ${{ secrets.COS_REGION }}
           COS_DOMAIN: ${{ secrets.COS_DOMAIN }}
+      - name: Print dist/index.html after upload
+        run: cat dist/index.html
