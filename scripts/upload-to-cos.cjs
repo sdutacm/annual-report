@@ -1,5 +1,5 @@
 // scripts/upload-to-cos.cjs
-// 用于将 dist 目录下的产物上传到 COS annual-report-2025 目录
+// 用于将 dist 目录下的产物上传到 COS oj-annual-report-2025 目录
 
 const COS = require('cos-nodejs-sdk-v5');
 const path = require('path');
@@ -9,7 +9,7 @@ const COS_SECRET_ID = process.env.COS_SECRET_ID;
 const COS_SECRET_KEY = process.env.COS_SECRET_KEY;
 const COS_BUCKET = process.env.COS_BUCKET;
 const COS_REGION = process.env.COS_REGION;
-const COS_PREFIX = 'annual-report-2025/';
+const COS_PREFIX = 'oj-annual-report-2025/';
 
 const cos = new COS({
   SecretId: COS_SECRET_ID,
