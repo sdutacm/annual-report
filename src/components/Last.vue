@@ -39,7 +39,22 @@
           height="100%"
           class="lcllab"
         />
+        <div
+          style="
+            width: 100%;
+            height: fit-content;
+            position: absolute;
+            bottom: 0;
+            transform: translateY(1rem);
+            color: gray;
+            text-align: center;
+            font-size: 0.1rem;
+          "
+        >
+          BGM：灰澈 - 午后
+        </div>
       </div>
+
       <span ref="text1" class="chars">S</span>
       <span ref="text2" class="chars">D</span>
       <span ref="text3" class="chars">U</span>
@@ -142,7 +157,8 @@
                 </div>
 
                 <div class="days-num">
-                  同行&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>{{ days }}</span> 天
+                  同行&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span>{{ days }}</span> 天
                 </div>
               </div>
               <div class="contests" v-if="haveContest">
@@ -152,12 +168,17 @@
                   class="bisai"
                 >
                   <span>{{ item.title }}</span>
-                  <span :class="item.medal ? `text-${item.medal}` : ''">{{ item.awardStr }}</span>
+                  <span :class="item.medal ? `text-${item.medal}` : ''">{{
+                    item.awardStr
+                  }}</span>
                 </li>
               </div>
             </div>
           </div>
-          <div class="results-summary-container__options" :style="{ opacity : tags.length > 0 ? 1 : 0 }">
+          <div
+            class="results-summary-container__options"
+            :style="{ opacity: tags.length > 0 ? 1 : 0 }"
+          >
             <div class="tag-head">2025 回忆标签 ✨️</div>
             <ul class="summary-result-options">
               <li v-for="(item, index) in tags" :key="index" class="tag">
