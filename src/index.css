@@ -15,7 +15,7 @@ body {
   height: 100vh;
   overflow: hidden;
   background-size: cover;
-  background-image: url("./src/assets/img/sdutacm_bg_desktop.jpg");
+  /* background-image: url("./src/assets/img/sdutacm_bg_desktop.jpg"); */
   z-index: -3;
   display: flex;
   justify-content: center;

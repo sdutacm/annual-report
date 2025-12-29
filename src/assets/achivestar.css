@@ -109,7 +109,7 @@
   font-size: 18px;
 }
 
-.title p{
+.title .num{
   /* display: inline-block; */
   font-size: .6rem;
   font-weight: 700;

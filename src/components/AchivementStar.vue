@@ -7,9 +7,8 @@
             <div class="name">作为成就大师</div>
             <div class="handle">@Achievement</div>
             <div class="title">
-              你总计达成了
-              <p>{{ allcnt }}</p>
-              项成就 <span class="emoji">😊</span><br />
+              你总计达成了 <br>
+              <span class="num">{{ allcnt }}</span> 项成就 <span class="emoji">😊</span><br />
               继续努力向全收集进发吧！
             </div>
           </div>

@@ -48,7 +48,7 @@
     <div class="lt_txt" :class="{ upp: isClick }">
       <div class="kmc fontremove">
         <div class="hei" style="width: 100%">
-          <!-- <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${liuyang.avatar}`" alt="" style="border-radius: 50%;" /> -->
+          <!-- <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${liuyang.avatar}`" alt="" style="border-radius: 50%; aspect-ratio: 1;" /> -->
           <span>{{ liuyang.nickname }}，</span>
         </div>
         欢迎回来！SDUT OJ 一直记得你，并始终珍视由你留下的印记。

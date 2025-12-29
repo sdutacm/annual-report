@@ -79,6 +79,9 @@ onMounted(async () => {
     userid.value = String(getres.userId);
     avatar.value = String(getres.avatar);
     nickname.value = getres.nickname;
+    // userid.value = "1";
+    // avatar.value = "1.png";
+    // nickname.value = "hack";
     router.push({ name: "main" });
   } catch (e) {
     router.push({ name: "login" });
