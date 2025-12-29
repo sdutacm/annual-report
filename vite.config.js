@@ -11,16 +11,16 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  server: {
-    host: '127.0.0.1',
-    proxy: {
-      '/onlinejudge3/api': {
-        target: 'https://oj.sdutacm.cn',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/onlinejudge3\/api/, '/onlinejudge3/api'),
-      },
-    }
-  },
+  // server: {
+  //   host: '127.0.0.1',
+  //   proxy: {
+  //     '/onlinejudge3/api': {
+  //       target: 'https://oj.sdutacm.cn',
+  //       changeOrigin: true,
+  //       rewrite: (path) => path.replace(/^\/onlinejudge3\/api/, '/onlinejudge3/api'),
+  //     },
+  //   }
+  // },
   experimental: {
     renderBuiltUrl(filename) {
       let cdnUrl = process.env.CDN_URL || '/oj-annual-report-2025';
