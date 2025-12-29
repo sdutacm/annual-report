@@ -60,6 +60,7 @@
       <div class="jiyu" id="jiyu1"></div>
     </div>
   </section>
+  <Last id="pae15" class="page hide"></Last>
   <Special id="page2" class="page hide"></Special>
   <XinZeng id="page3" class="page hide"></XinZeng>
   <NewContest id="page4" class="page hide"></NewContest>
@@ -73,7 +74,6 @@
   <LeiTai id="page12" class="page hide" v-if="haspmc"></LeiTai>
   <AchivementStar id="page13" class="page hide" v-if="hasAchive" />
   <Master id="page14" class="page hide"></Master>
-  <Last id="pae15" class="page hide"></Last>
   <section style="z-index: -1"></section>
 </template>
 <script setup>

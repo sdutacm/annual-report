@@ -10,7 +10,7 @@
         <span>这一年里，OJ 新增了</span><span class="tjnum">{{ newSubmit }}</span
         ><span>条提交</span>
         <span class="ntj"
-          >截止目前，已有累计 <p>{{allSubmit}}</p> 条提交，已经突破 1000 万大关！</span
+          >截止目前，已有累计 <p>{{allSubmit}}</p> 条提交，现已突破 1000 万大关！</span
         >
       </p>
     </div>

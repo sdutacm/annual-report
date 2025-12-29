@@ -3,10 +3,12 @@
     <div class="font2">
       <span class="font2-txt">时至今日，</span>
       <span class="font2-txt">我们的旅程已经开始了 {{ days }} 天。</span>
-      <span class="font2-txt">看似一眨眼的时间，</span>
-      <span class="font2-txt">却承载了我们无可忘却的珍重回忆。</span>
-      <span class="font2-txt">以这份回忆的重量所编织的纽带，</span>
-      <span class="font2-txt">正是连结我们并一起前进的动力。</span>
+      <span class="font2-txt">你的每一次提交、每一次参赛，</span>
+      <span class="font2-txt">都是与众不同的印记。</span>
+      <span class="font2-txt">无数的印记，斑斓交错，</span>
+      <span class="font2-txt">共同组成了名为回忆的纽带。</span>
+      <span class="font2-txt">它连结起命定相交的时刻，</span>
+      <span class="font2-txt">并延向可期的未来。</span>
       <span class="font2-txt">愿时间与你共写美梦，</span>
       <span class="font2-txt">愿祝福伴你终抵云顶。</span>
       <span class="font2-txt">感谢陪伴！</span>
@@ -260,7 +262,7 @@ onMounted(() => {
                 entry.target.classList.add("charsanim");
                 const title = document.querySelector(".title");
                 title.classList.remove("fontactive");
-              }, 26000);
+              }, 30000);
             } else {
               entry.target.classList.remove("charsanim");
             }
@@ -275,7 +277,7 @@ onMounted(() => {
             if (entry.isIntersecting) {
               setTimeout(() => {
                 entry.target.classList.add("font1anim");
-              }, 26000);
+              }, 29000);
             } else {
               entry.target.classList.remove("font1anim");
             }
@@ -300,13 +302,13 @@ onMounted(() => {
               });
               setTimeout(() => {
                 entry.target.classList.add("remove");
-              }, 25000);
+              }, 27000);
               setTimeout(() => {
                 const sdutoj = document.querySelector(".sdutoj");
                 sdutoj.classList.add("sdutojanim");
                 const btn = document.querySelector(".btn");
                 btn.classList.add("sdutojanim");
-              }, 26000);
+              }, 30000);
             }
           });
         },
@@ -319,7 +321,7 @@ onMounted(() => {
             if (entry.isIntersecting) {
               setTimeout(() => {
                 entry.target.classList.add("btm-logo");
-              }, 26000);
+              }, 30000);
             } else {
               entry.target.classList.remove("btm-logo");
             }
@@ -433,6 +435,7 @@ if (liuyang.value.competition.attendedCompetitionCount > 0) {
   contests.value = liuyang.value.competition.attendedCompetitions;
 }
 </script>
+
 <style scoped>
 @import url("../assets/sumarry.css");
 @import url("../assets/last.css");
